@@ -51,3 +51,11 @@ Each stage is designed to sequentially transform the raw image data into a struc
    ```bash
    python app.py
 6. Open your web browser and go to http://127.0.0.1:5000 to use the application.
+
+
+## Example Output
+
+Here is an example output showing the detected license plate number with the corresponding state:
+
+![Detected License Plate](output_example.jpg)
+
