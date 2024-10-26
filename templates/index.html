@@ -1,0 +1,47 @@
+{% extends 'layout.html' %} 
+{% block body %}
+<div class="container mt-5">
+  <form action="#" method="POST" enctype="multipart/form-data" class="p-4 border rounded" style="background-color: #92ff99e9;">
+    <div class="input-group mb-3">
+      <input type="file" class="form-control" name="image_name" required />
+      <button type="submit" class="btn btn-success">Upload</button>
+    </div>
+  </form>
+</div>
+
+{% if upload %}
+<div class="container mt-4 p-4 border rounded" style="background-color: #eafbe1;">
+  <div class="row mb-4">
+    <div class="col-md-6">
+      <img
+        class="rounded img-fluid border shadow-sm"
+        src="/static/upload/{{upload_image}}"
+        alt="Uploaded Image"
+      />
+    </div>
+    <div class="col-md-6">
+      <img
+        class="rounded img-fluid border shadow-sm"
+        src="/static/predict/{{upload_image}}"
+        alt="Predicted Output"
+      />
+    </div>
+  </div>
+  
+  <table class="table table-bordered">
+    <thead class="table-primary">
+      <tr>
+        <th scope="col" style="background-color: #92ff99e9;">Vehicle Number and State</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="background-color: #ffffff;">
+          <h1 class="display-8 text-center">{{ text }}</h1>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+{% endif %}
+{% endblock %}
