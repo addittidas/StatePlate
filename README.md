@@ -35,3 +35,19 @@ Each stage is designed to sequentially transform the raw image data into a struc
    ```bash
    git clone https://github.com/addittidas/StatePlate.git
    cd StatePlate
+   
+2. Install the necessary dependencies:
+   ```bash
+   pip install -r requirements.txt
+   
+3. Run the Jupyter Notebook to train and save the model:
+
+   - Open Number_Plate_Deep_Learning_main.ipynb in Jupyter Notebook.
+   - Execute all cells to train the model.
+   - Save the trained model for further use.
+
+4. Change the model path in deeplearning.py to point to the saved model.
+5. Run the flask application:
+   ```bash
+   python app.py
+6. Open your web browser and go to http://127.0.0.1:5000 to use the application.
